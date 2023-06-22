@@ -1,0 +1,87 @@
+body {
+    margin: 0 ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+form h1 {
+    background-color: aquamarine;
+    text-align: center;
+    margin: 0;
+}
+
+.chatroom-container {
+    display: none;
+    background-color: lightslategrey;
+    /* height: fit-content; */
+}
+
+.inputusername {
+    border: 5px solid chocolate;
+    margin:auto;
+    width: max-content;
+    height: max-content;
+}
+
+.inputusername div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.inputusername button {
+    color: blue;
+    width: 250px;
+    height: 50px;
+}
+
+#messages-div {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.message {
+    background-color: #e1e1e1;
+    width: fit-content;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.sent {
+    align-self: flex-end;
+}
+
+.chatbox-input {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.chatbox-input input {
+    width: 75%;
+    height: 40px;
+    background-color: whitesmoke;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.chatbox-input button {
+    margin: 15px;
+    width: 50px;
+}
+
+
+.chatroomheading {
+    background-color: orange;
+    /* padding:10px; */
+    text-align: center;
+}
+
+.chatroomheading h2 {
+    margin: 0;
+}

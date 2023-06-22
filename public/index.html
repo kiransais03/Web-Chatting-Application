@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Guduru Kiran Sai">
+        <meta name="keywords" content="chat app,dual user chat,private chat">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Private chat appication on Web Browser,No installation required">
+        <title>Web Chat Appication</title>
+        <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/color/48/telegram-app--v1.png">
+       <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <form class="userdetails" method="get">
+            <h1>Welcome To Web Chat Application</h1>
+            <h3 style="text-align: center;color: darkmagenta;">Join Chat Room</h3>
+           <div class="inputusername">
+              <div>
+            <label for="username"><b>Username:</b></label>
+            <input id="username" name="username" type="text" placeholder="Enter Username" required>
+            <br>
+            <button type="submit" id="join-btn">Enter Chatroom</button>
+               </div> 
+           </div>
+        </form>
+        
+        <div class="chatroom-container">
+           <div class="chatroomheading">Chatroom</div>
+           <div id="messages-div">
+           </div>
+           <form id="ipboxclr" class="chatbox-input">
+              <input type="text" id="chatmsg" name="chatdata" placeholder="Enter message here">
+              <button id="sendbtn"><img width="25px" height="25px" src="https://img.icons8.com/color/48/telegram-app--v1.png" alt="Send"></button>
+           </form>
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>
