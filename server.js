@@ -28,16 +28,10 @@ io.on('connection',(socket)=>{
     })
 })
 
-// //Creating port to run the server
-// const PORT = 9000;  //this is inbuilt keyword
-// server.listen(PORT,()=>{
-//   console.log(`Server is on Port ${PORT}`);
-// })
+//Creating port to run the server
+const PORT = 9000;  //this is inbuilt keyword
+server.listen(PORT,()=>{
+  console.log(`Server is on Port ${PORT}`);
+})
 
-const port = process.env.PORT || 3000;
 
-// ...Express setup code...
-
-application.listen(port, () => {
-    console.log(`App listening at http://localhost:${port}`);
-});
