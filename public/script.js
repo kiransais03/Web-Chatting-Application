@@ -11,19 +11,24 @@ document.getElementById('join-btn').addEventListener('click',(event)=>{
                                                                 <p> Username: ${username} </p>`;
     }
 })
+let msgcount=0;
 
 document.getElementById('sendbtn').addEventListener('click',(event)=>{
-    event.preventDefault(); //no use here just for safety
-
-        
+    event.preventDefault(); 
     let data= {
         username: username,
         message:(document.getElementById('chatmsg').value).trim(),
+    }
+    msgcount++;
+    if(msgcount>=9){
+    document.querySelector("#messages-div").style.position='relative';
     }
 
       if(data.message!=='') {
         socket.emit('message1',data);
       addMessage(data,true); //Sent by us --> true
+      var sentmsg = new Audio('audio/sent.mp3');
+            sentmsg.play(); 
     }
     document.getElementById('ipboxclr').reset();
 })
@@ -31,6 +36,12 @@ document.getElementById('sendbtn').addEventListener('click',(event)=>{
 socket.on('message1',(data)=>{
     if(data.username!==username)
     {
+        msgcount++;
+        if(msgcount>=9){
+            document.querySelector("#messages-div").style.position='relative';
+            }
+            var receivedmsg = new Audio('audio/received.mp3');
+            receivedmsg.play();            
         addMessage(data,false);
     }
 })
@@ -50,6 +61,4 @@ function addMessage(data,checktrue_or_false) {
     parent.append(div);
     let inputelem =  document.getElementsByName('chatdata');
     inputelem.value=''
-
-      
 }

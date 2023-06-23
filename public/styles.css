@@ -1,6 +1,6 @@
 body {
     margin: 0 ;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 form h1 {
@@ -11,7 +11,7 @@ form h1 {
 
 .chatroom-container {
     display: none;
-    background-color: lightslategrey;
+    /* background-color: lightslategrey; */
     /* height: fit-content; */
 }
 
@@ -40,7 +40,8 @@ form h1 {
 #messages-div {
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    /* position: relative; */
+    padding-bottom: 100px;
 }
 
 .message {
@@ -59,7 +60,7 @@ form h1 {
     justify-content: center;
     position: absolute;
     bottom: 0;
-
+    width: 100%;
 }
 
 .chatbox-input input {
@@ -82,6 +83,6 @@ form h1 {
     text-align: center;
 }
 
-.chatroomheading h2 {
+.chatroomheading h2,.chatroomheading p {
     margin: 0;
 }
