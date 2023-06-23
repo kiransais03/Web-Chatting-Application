@@ -4,7 +4,7 @@ body {
 }
 
 form h1 {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     text-align: center;
     margin: 0;
 }
@@ -17,6 +17,7 @@ form h1 {
 
 .inputusername {
     border: 5px solid chocolate;
+    border-radius: 10px;
     margin:auto;
     width: max-content;
     height: max-content;
@@ -49,6 +50,10 @@ form h1 {
     width: fit-content;
     padding: 0.5rem;
     margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    min-width:40px;
 }
 
 .sent {
@@ -85,4 +90,20 @@ form h1 {
 
 .chatroomheading h2,.chatroomheading p {
     margin: 0;
+}
+
+
+#join-btn {
+    cursor: pointer;
+}
+
+.msgtext {
+    color: black;
+    padding-right: 20px;
+}
+
+.msgusername {
+    color: purple;
+    text-align: end;
+    font-size: 12px;
 }

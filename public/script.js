@@ -6,8 +6,9 @@ document.getElementById('join-btn').addEventListener('click',(event)=>{
     username = document.getElementById("username").value;
     if(username.trim()!="") {
         document.querySelector(".userdetails").style.display='none';
+        document.querySelector(".box-form").style.display='none';
         document.querySelector(".chatroom-container").style.display='block';
-        document.querySelector('.chatroomheading').innerHTML = `<h2>Chatroom 1</h2>
+        document.querySelector('.chatroomheading').innerHTML = `<h2>Chatroom</h2>
                                                                 <p> Username: ${username} </p>`;
     }
 })
@@ -51,7 +52,9 @@ function addMessage(data,checktrue_or_false) {
      // check -> true for sent
     // check -> false for recieved
     let div=document.createElement('div');
-    div.innerText=`${data.username}: ${data.message}`;
+    div.innerHTML=`<div class="msgtext">${data.message}</div>
+                    <div class="msgusername">${data.username}</div>`;
+
     if(checktrue_or_false) {
         div.setAttribute("class",'message sent');
     }
