@@ -11,6 +11,7 @@ document.getElementById('join-btn').addEventListener('click',(event)=>{
                                                                 <p> Username: ${username} </p>`;
     }
 })
+
 let msgcount=0;
 
 document.getElementById('sendbtn').addEventListener('click',(event)=>{
